@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Global focus styles for better accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-purple-600 ring-offset-2 ring-offset-white;
+  }
+  
+  /* Specific styles for interactive elements */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [role="button"]:focus-visible {
+    @apply outline-none ring-2 ring-purple-600 ring-offset-2 ring-offset-white;
+  }
+  
+  /* For dark backgrounds */
+  .bg-purple-600 *:focus-visible,
+  .bg-purple-500 *:focus-visible {
+    @apply ring-offset-purple-600 ring-white;
+  }
+}
+
+@layer utilities {
+  /* Utility class for custom focus states */
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2;
+  }
+  
+  /* For dark backgrounds */
+  .focus-ring-light {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-purple-600;
+  }
+}
