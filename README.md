@@ -63,4 +63,8 @@ A responsive women's healthcare web application designed to connect patients wit
 
 ## License
 
-MIT 
+MIT
+
+## Last Updated
+
+Updated on March 25, 2025 - Ready for deployment with responsive design optimizations. 
