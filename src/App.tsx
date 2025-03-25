@@ -6,13 +6,6 @@ import { CareTeam } from './components/CareTeam';
 import { About } from './components/About';
 import { FAQ } from './components/FAQ';
 
-export interface SelectedProvider {
-  id: string;
-  name: string;
-  role: string;
-  image: string;
-}
-
 function App() {
   const [currentView, setCurrentView] = useState('home');
   const [error, setError] = useState<string | null>(null);

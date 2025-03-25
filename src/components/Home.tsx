@@ -12,41 +12,13 @@ import {
   ArrowRight,
   Shield,
   MessageSquare,
-  Download,
-  MessageCircle,
-  ClipboardList,
-  UserCheck
+  MessageCircle
 } from 'lucide-react';
-import type { SelectedProvider } from '../App';
 import { Footer } from './Footer';
 
 interface HomeProps {
   onNavigate?: (view: string) => void;
 }
-
-const providers = [
-  {
-    id: '1',
-    name: 'Dr. Anna Jones',
-    role: 'MD, General Practitioner',
-    rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=100&h=100'
-  },
-  {
-    id: '2',
-    name: 'Tiya Mcdaniel, NP',
-    role: 'Nurse Practitioner',
-    rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=100&h=100'
-  },
-  {
-    id: '3',
-    name: 'John Berry, PA',
-    role: 'Fertility Specialist',
-    rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=100&h=100'
-  }
-];
 
 const conditions = [
    {
@@ -120,11 +92,6 @@ export function Home({ onNavigate }: HomeProps) {
 
   const scrollToSignup = () => {
     signupRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleSignUp = () => {
-    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdZeKSkwnic9xpMsYZNjKENZ51zYMaXnr2k0bH-_D5dHS2eVA/viewform?usp=sharing';
-    window.open(formUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
